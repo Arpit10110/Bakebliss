@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+.shopnav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 1.5rem;
+}
+.shopnav a{
+    background-color: #b23691;
+    color: white;
+    padding: 0.5rem;
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-size: 1.5vw;
+    border-radius: 10px;
+    font-family: "Concert One", sans-serif;
+}
+@media only screen and (width<= 600px){
+    .shopnav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.8rem;
+        margin-top: 1.5rem;
+    }
+    .shopnav a {
+        background-color: #b23691;
+        color: white;
+        padding: 0.5rem;
+        font-weight: 100;
+        letter-spacing: 1px;
+        font-size: 4.5vw;
+        border-radius: 10px;
+        font-family: "Concert One", sans-serif;
+    }
+}

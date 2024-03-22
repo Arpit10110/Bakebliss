@@ -5,7 +5,7 @@ const ShowFoot = ({children}) => {
     const Loaction=useLocation();
    
     useEffect(() => {
-     if(Loaction.pathname === "/")
+     if(Loaction.pathname === "/" || Loaction.pathname === "/homepastry" || Loaction.pathname === "/homeburger" || Loaction.pathname === "/homecake")
      {
        setshowfooter(true);
     } 

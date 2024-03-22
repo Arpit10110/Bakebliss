@@ -30,7 +30,7 @@ const Navbar = () => {
             <CloseIcon onClick={closefun} className="CloseBtn" />
           </div>
           <Link  onClick={closefun} to="/">Home</Link>
-          <Link  onClick={closefun} to="/shop">Shop</Link>
+          <Link  onClick={closefun} to="/shop/coffee">Shop</Link>
           <Link  onClick={closefun} to="/cart">
             <ShoppingCartIcon className="cart" />
           </Link>

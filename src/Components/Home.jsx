@@ -11,6 +11,7 @@ import { Homecoffee } from './Homecoffee';
 import { TrandigP } from './TrandingP';
 import Pcard from "./Pcard.jsx"
 const Home = () => {
+  const Homecoffee4=Homecoffee.slice(0,5);
   const [countingStarted, setCountingStarted] = useState(false);
   const [count1, setCount1] = useState(0);
   const [count2, setCount2] = useState(0);
@@ -117,15 +118,15 @@ const Home = () => {
           <Outlet />
           <div className="homeProd-wraper" id='homeCoffe'>
             {
-              Homecoffee.map((i)=>{
+              Homecoffee4.map((i)=>{
                 return(
-                 <Pcard id={i.id} img={i.img} name={i.name} price={i.price} rating={i.rating} />
+                 <Pcard key={i.id} id={i.id} img={i.img} name={i.name} price={i.price} rating={i.rating} />
                 )
               })
             }
             <div className="cardContMore">
               <h3>View more products</h3>
-              <Link to="/shop">Click Here <ArrowOutwardIcon/></Link>
+              <Link to="/shop/coffee">Click Here <ArrowOutwardIcon/></Link>
             </div>
           </div>
         </div>
@@ -138,7 +139,7 @@ const Home = () => {
             {
               TrandigP.map((i)=>{
                 return(
-                 <Pcard id={i.id} img={i.img} name={i.name} price={i.price} rating={i.rating} />
+                 <Pcard key={i.id} id={i.id} img={i.img} name={i.name} price={i.price} rating={i.rating} />
                 )
               })
             }

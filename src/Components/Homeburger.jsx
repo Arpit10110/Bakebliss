@@ -11,13 +11,13 @@ const HomeBurger = () => {
             {
               firstFourBurgers.map((i)=>{
                   return(
-                   <Pcard id={i.id} img={i.img} name={i.name} price={i.price} rating={i.rating} />
+                   <Pcard key={i.id} id={i.id} img={i.img} name={i.name} price={i.price} rating={i.rating} />
                   )
               })
             }
             <div className="cardContMore">
               <h3>View more products</h3>
-              <Link to="/shop">Click Here <ArrowOutwardIcon/></Link>
+              <Link to="/shop/burger">Click Here <ArrowOutwardIcon/></Link>
             </div>
           </div>
   </>

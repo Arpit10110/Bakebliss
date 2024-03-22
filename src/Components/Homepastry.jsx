@@ -4,19 +4,20 @@ import Pcard from "./Pcard.jsx"
 import { Link } from 'react-router-dom';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 const Homepastry = () => {
+  const HomePastry4=HomePastry.slice(0,5);
   return (
     <>
     <div className="homeProd-wraper">
              {
-               HomePastry.map((i)=>{
+               HomePastry4.map((i)=>{
                  return(
-                  <Pcard id={i.id} img={i.img} name={i.name} price={i.price} rating={i.rating} />
+                  <Pcard key={i.id} id={i.id} img={i.img} name={i.name} price={i.price} rating={i.rating} />
                  )
                })
              }
              <div className="cardContMore">
                <h3>View more products</h3>
-               <Link to="/shop">Click Here <ArrowOutwardIcon/></Link>
+               <Link to="/shop/pastry">Click Here <ArrowOutwardIcon/></Link>
              </div>
            </div>
    </>
