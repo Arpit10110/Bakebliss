@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+.Nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.3rem;
+    align-items: center;
+    padding-top: 0.3vw;
+}
+.brandName {
+    padding-left: 0.5rem;
+    font-size: 2.5vw;
+    color: #ee4562;
+    letter-spacing: 3px;
+    font-family: "Lemon", serif;
+}
+.navItem{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding-right: 1rem;
+    font-family: "Concert One", sans-serif;
+}
+.navItem a{
+    font-size: 1.7vw;
+    color: black;
+}
+.navItem a .cart {
+    font-size: 2vw;
+    color: black;
+    font-family: "Concert One", sans-serif;
+}
+.navItem a .cart:hover{
+    color: rgb(247, 70, 100);
+}
+.navItem a:hover{
+    color: rgb(247, 70, 100);
+}
+.BtnDiv{
+    display: none;
+}
+@media only  screen and (width<=600px) {
+    .BtnDiv{
+        display: block;
+    }
+    .navItem{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        right: 0rem;
+        top: 0rem;
+        background-color: rgb(236, 236, 236);;
+        width: 30%;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 2rem;
+        border-radius: 3rem 0rem 0rem 3rem;
+        padding-top: 1rem;
+        padding-right: 0rem;
+        z-index: 9;
+        border: 1.5px solid;
+    }
+    .BtnDiv{
+        display: flex;
+        justify-content: end;
+        width: 100%;
+    }
+    .BtnDiv .CloseBtn{
+        font-size: 7.5vw;
+    }
+    .brandName{
+        font-size: 5vw;
+    }
+    .BtnDiv .MenuBtn{
+        font-size: 7.5vw;
+    }
+    .navItem a{
+        font-size: 5vw;
+        color: black;
+    }
+    .navItem a .cart{
+        font-size: 6.8vw;
+    }
+}
+

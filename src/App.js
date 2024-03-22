@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from "./Components/Home.jsx";
+import Navbar from "./Components/Navbar";
+import Homecake from "./Components/Homecake.jsx";
+import Homeburger from "./Components/Homeburger.jsx";
+import Homepastry from "./Components/Homepastry.jsx";
+import Footer from "./Components/Footer.jsx";
+import FoodDetail from './Components/FoodDetail.jsx';
+import ShowFoot from './Components/ShowFoot.jsx';
+import "./Style/Style.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} >
+        <Route path="/homecake" element={<Homecake />} />
+        <Route path="/homeburger" element={<Homeburger />} />
+        <Route path="/homepastry" element={<Homepastry />} />
+        </Route>
+        <Route path="/fooddetail/:id" element={<FoodDetail />} />
+      </Routes>
+      <ShowFoot>
+      <Footer />
+      </ShowFoot>
+    </Router>
   );
-}
+};
 
 export default App;

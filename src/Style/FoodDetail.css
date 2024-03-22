@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+.foodDetail-Main{
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    gap: 4rem;
+    cursor: default;
+}
+.price{
+    color: #13cd13;
+}
+.foodDetail-Main img {
+    width: 33%;
+    height: 70vh;
+    border-radius: 3rem;
+    object-fit: fill;
+}
+.foodDetail-cont{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.foodDetail-cont h1{
+    font-size: 2.5vw;
+}
+.foodDetail-cont h1 span {
+    color: #fa4982;
+    font-weight: 100;
+    font-family: "Lemon", serif;
+}
+.foodDetail-rate-price{
+    display: flex;
+    gap: 6rem;
+}
+.foodDetail-rate-price h3 {
+    font-size: 1.8vw;
+    display: flex;
+    align-items: self-start;
+    justify-content: center;
+}
+.foodDetail-stars{
+    color: #ff9b00;
+}
+.foodDetail-cont h2 {
+    font-size: 1.8vw;
+    width: 80%;
+}
+.foodDetail-cont h2 span{
+    color: #257fa4;
+} 
+.foodDetail-cont button{
+    font-size: 1.2vw;
+    padding: 0.4rem;
+    border: 2px solid;
+    border-radius: 9px;
+    cursor: pointer;
+    background-color: #d0d0d0;
+}
+
+@media only screen and (width<= 600px){
+    .foodDetail-Main {
+        display: flex;
+        margin-top: 1rem;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: 90vh;
+        gap: 1rem;
+    }
+    .foodDetail-Main img {
+        width: 93%;
+        height: 50vh;
+        border-radius: 1rem;
+        object-fit: fill;
+    }
+    .foodDetail-cont {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 17px;
+    }
+    .foodDetail-cont h1 {
+        font-size: 4.8vw;
+    }
+    .foodDetail-rate-price {
+        display: flex;
+        gap: 2rem;
+    }
+    .foodDetail-rate-price h3 {
+        font-size: 5vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .foodDetail-cont h2 {
+        font-size: 5vw;
+        width: 95%;
+        text-align: center;
+    }
+    .foodDetail-cont button {
+        font-size: 4vw;
+        padding: 0.4rem;
+        border: 2px solid;
+        border-radius: 9px;
+        cursor: pointer;
+        background-color: #d0d0d0;
+    }
+}

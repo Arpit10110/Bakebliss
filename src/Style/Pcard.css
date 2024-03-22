@@ -1,0 +1,128 @@
+.cardCont {
+    width: 28%;
+    border: 2px solid gray;
+    display: flex;
+    background-color: #d4d4d4;
+    border-radius: 10px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+}
+.star {
+    color: #ff8719;
+}
+.cardContMore {
+    width: 28%;
+    border: 2px solid gray;
+    display: flex;
+    color: #274C5B;
+    background-color: #d4d4d4;
+    border-radius: 10px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;
+    gap: 1rem;
+}
+.cardContMore a {
+    border: 2px solid;
+    color: #1a6583;
+    font-weight: bold;
+    background-color: #EFD372;
+    padding: 0.3rem;
+    border-radius: 8px;
+}
+.cardCont img {
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    height: 40vh;
+    object-fit: fill;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-bottom: 0.7rem;
+    margin-top: 0.5rem;
+}
+.content h5{
+    font-size: 1.3vw;
+    text-align: center;
+}
+.content button{
+    font-size: 1.1vw;
+    padding: 0.3rem;
+    border-radius: 8px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+}
+.price-rating{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 2vw;
+    align-items: center;
+}
+@media only screen and (width<= 600px){
+    .cardCont {
+        width: 84%;
+        border: 2px solid gray;
+        display: flex;
+        background-color: #d4d4d4;
+        border-radius: 10px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+    }
+    .cardCont img {
+        width: 100%;
+        border-radius: 10px 10px 0px 0px;
+        height: 45vh;
+        object-fit: fill;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 0.7rem;
+        margin-top: 0.5rem;
+    }
+    .content h5 {
+        font-size: 5vw;
+        text-align: center;
+    }
+    .price-rating {
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 7vw;
+        align-items: center;
+    }
+    .content button {
+        font-size: 4vw;
+        padding: 0.3rem;
+        border-radius: 8px;
+        margin: auto;
+        text-align: center;
+        display: flex;
+    }
+    .cardContMore {
+        width: 84%;
+        height: 60vh;
+        border: 2px solid gray;
+        display: flex;
+        color: #274C5B;
+        background-color: #d4d4d4;
+        border-radius: 10px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+        font-weight: bold;
+        justify-content: center;
+        align-items: center;
+        font-size: 6vw;
+        gap: 1rem;
+    }
+}
