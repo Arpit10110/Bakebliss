@@ -8,14 +8,17 @@ import { burgerapi } from "./HomeBurger";
 import "../Style/FoodDetail.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import {useDispatch} from "react-redux"
 const FoodDetail = () => {
+  const dispatch=useDispatch();
   const parms = useParams();
   const Id = parms.id;
-  let name, img, price, rating, dsc;
+  let id,name, img, price, rating, dsc;
   let i = 0;
   if (Id.includes("cf")) {
     Homecoffee.map((i) => {
       if (i.id == Id) {
+        id=i.id;
         name = i.name;
         img = i.img;
         price = i.price;
@@ -23,9 +26,11 @@ const FoodDetail = () => {
         dsc = i.description;
       }
     });
-  } else if (Id.includes("c")) {
+  }
+   else if (Id.includes("c")) {
     HomeCake.map((i) => {
       if (i.id == Id) {
+        id=i.id;
         name = i.name;
         img = i.img;
         price = i.price;
@@ -33,9 +38,11 @@ const FoodDetail = () => {
         dsc = i.description;
       }
     });
-  } else if (Id.includes("p")) {
+  } 
+  else if (Id.includes("p")) {
     HomePastry.map((i) => {
       if (i.id == Id) {
+        id=i.id;
         name = i.name;
         img = i.img;
         price = i.price;
@@ -47,6 +54,7 @@ const FoodDetail = () => {
   else if (Id.includes("B")) {
     burgerapi.map((i) => {
       if (i.id == Id) {
+        id=i.id;
         name = i.name;
         img = i.img;
         price = i.price;
@@ -59,7 +67,15 @@ const FoodDetail = () => {
   for (let i = 1; i <= rating; i++) {
     stars.push(<StarIcon style={{ fontSize: "2rem" }} key={i} />);
   }
-  const AddtoCart=()=>{
+  const AddtoCart=(addItem)=>{
+    dispatch({
+      type:"AddtoCart",
+      payload:addItem
+  })
+    dispatch({
+      type:"Calculate",
+  })
+    console.log(addItem)
     toast.success('Add to Cart', {
       position: "top-center",
       autoClose: 2000,
@@ -82,7 +98,11 @@ const FoodDetail = () => {
             <h3>Rating:- <span className="foodDetail-stars">{stars}</span></h3>
           </div>
           <h2>Description:- <span>{dsc}</span></h2>
-          <button onClick={AddtoCart}>Add to Cart</button>
+          <button onClick={()=>{
+            return(
+              AddtoCart({Id:id,Name:name,Price:price,Img:img,Qty:1})
+            )
+          }}>Add to Cart</button>
         </div>
       </div>
       <ToastContainer

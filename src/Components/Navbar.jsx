@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import {useSelector} from "react-redux"
 const Navbar = () => {
+  const {CartItem} = useSelector(state=>state.cart);
+  const CartVal=CartItem.length;
   function menuFun() {
     let menuBtn = document.querySelector(".MenuBtn");
     let Navbar = document.querySelector(".navItem");
@@ -32,7 +35,7 @@ const Navbar = () => {
           <Link  onClick={closefun} to="/">Home</Link>
           <Link  onClick={closefun} to="/shop/coffee">Shop</Link>
           <Link  onClick={closefun} to="/cart">
-            <ShoppingCartIcon className="cart" />
+            <ShoppingCartIcon className="cart" />{CartVal}
           </Link>
           <Link  onClick={closefun} to="/contact">Contact</Link>
           <Link  onClick={closefun} to="/login">Login</Link>

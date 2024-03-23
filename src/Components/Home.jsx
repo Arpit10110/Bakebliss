@@ -19,6 +19,7 @@ const Home = () => {
   const [count4, setCount4] = useState(0);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const handleScroll = () => {
       const page2 = document.querySelector('.page2');
       const distanceToTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -75,7 +76,7 @@ const Home = () => {
     <>
       <div className="main">
         <div className="page1">
-          <Link to="/shop">
+          <Link to="/shop/coffee">
             <img src={banner} alt="banner" />
           </Link>
         </div>

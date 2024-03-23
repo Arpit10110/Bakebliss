@@ -14,6 +14,7 @@ import Coffee from "./Components/Coffee.jsx";
 import Burger from "./Components/Burger.jsx";
 import Pastry from "./Components/Pastry.jsx";
 import Cake from "./Components/Cake.jsx";
+import Cart from "./Components/Cart.jsx";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
           <Route path="burger" element={<Burger />} />
           <Route path="cake" element={<Cake />} />
         </Route>
+        <Route path="/cart" element={<Cart/>} />
       </Routes>
       <ShowFoot>
         <Footer />
