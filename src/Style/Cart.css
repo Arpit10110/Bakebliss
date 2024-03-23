@@ -93,3 +93,95 @@
     font-weight: 100;
     align-items: center;
 }
+@media only screen and (width<= 600px){
+    .Cart-main {
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        flex-direction: column;
+        height: 95vh;
+    }
+    .showCart-Item {
+        display: flex;
+        width: 100%;
+        overflow-y: scroll;
+        height: 100vh;
+        margin-bottom: 1rem;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 4px;
+    }
+    .Cart-box {
+        display: flex;
+        cursor: default;
+        width: 90%;
+        background-color: #d6d6d6;
+        border: 2px solid;
+        border-radius: 7px;
+        margin-top: 2.5rem;
+        justify-content: space-around;
+        padding: 4px;
+        align-items: center;
+    }
+    .Cart-box img {
+        width: 20%;
+        height: 14vh;
+        object-fit: fill;
+        border-radius: 9px;
+    }
+    .name-price {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 4vw;
+        gap: 1.5rem;
+    }
+    .qty-counter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 6vw;
+        gap: 0.5rem;
+    }
+    .qty-counter button {
+        padding: 0.3rem;
+        font-size: 5vw;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 7px;
+    }
+    .deletediv .DeleteIcon {
+        font-size: 6vw;
+        cursor: pointer;
+    }
+    .showCart-bill {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #666666;
+        margin: auto;
+        height: 55vh;
+        color: white;
+        border-radius: 0px 0px 0px 0px;
+        width: 100%;
+    }
+    .billBox {
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+        font-size: 4.8vw;
+        justify-content: center;
+        font-weight: 100;
+        align-items: center;
+    }
+    .CartEmpty {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        height: 89vh;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 4px;
+    }
+}
